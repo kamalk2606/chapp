@@ -66,4 +66,4 @@ io.on('connect',(socket) => {
 
 
 
-server.listen($(BASE_URL),() => console.log('Server started on 8000'))
+server.listen(BASE_URL,() => console.log('Server started on 8000'))
