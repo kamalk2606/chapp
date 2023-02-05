@@ -3,7 +3,6 @@ const express = require("express");
 const socketio = require("socket.io");
 const http = require("http");
 const { addUser, removeUser, getUser, getRoomUsers } = require("./entity");
-const BASE_URL=process.env.BASE_URL
 // Instances
 const app = express()
 const server = http.createServer(app);
@@ -66,4 +65,4 @@ io.on('connect',(socket) => {
 
 
 
-server.listen(BASE_URL,() => console.log('Server started on 8000'))
+server.listen(process.env.BASE_URL||8000,() => console.log('Server started on 8000'))
