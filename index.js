@@ -65,4 +65,4 @@ io.on('connect',(socket) => {
 
 
 
-server.listen(process.env.BASE_URL||8000,() => console.log('Server started on 8000'))
+server.listen(process.env.PORT||8000,() => console.log('Server started on 8000'))
